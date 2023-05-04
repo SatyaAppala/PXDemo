@@ -11,7 +11,27 @@ function allowlogin(usermail)
     if (a == 'demouser@gmail.com' || a == 'lkchittajallu@gainsight.com' || a == 'dpraj@gainsight.com' || a == 'vappala@gainsight.com')
     { 
         var b= a.substr(0,5);
-
+      //passing user and account objects:
+      
+aptrinsic("identify",
+  {
+  //User Fields
+    "id": b, // Required for logged in app users
+    "email": a,
+    "firstName": "Satya",
+    "lastName": "Appala",
+    //"signUpDate": 1522697426479, //unix time in ms
+    //"plan" : "gold", //Custom attributes - please create those custom attributes in Aptrinsic via Account Settings to be tracked.
+    //"price" : 95.5,
+   // "userHash": "" // optional transient for HMAC identification
+  },
+  {
+  //Account Fields
+    "id":"Demo", //Required
+    "name":"Gainsight PX Demo",
+    "Program": "Test PX" // flat custom attributes
+ });
+      
         alert('valid user');
         location.href = "Page1.html";
     }
