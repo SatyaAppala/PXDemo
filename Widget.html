@@ -41,7 +41,6 @@
 <script>
     $( function() {
         $( ".dragred").draggable(
-      
             
         )
       } );
@@ -54,7 +53,8 @@
       } );
 
       $( function() {
-        $( ".draggreen").draggable(
+        $( ".draggreen").draggable({
+      stop : function r() {aptrinsic('track', ‘DragE', {"name”:”Drag Green”,"Colour”:"Green”,”Event”:Drag});}
             
             
         )
