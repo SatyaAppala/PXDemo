@@ -40,24 +40,22 @@
 </div>
 <script>
     $( function() {
-        $( ".dragred").draggable(
+        $( ".dragred").draggable({
+            stop : function r() {aptrinsic('track','dragevent',{"name":"red drag", "color" : 'red'});}
             
-        )
+        })
       } );
-
-      $( function() {
-        $( ".dragblue").draggable(
-        
+$( function() {
+        $( ".dragblue").draggable({
+            stop : function r() {aptrinsic('track','dragevent',{"name":"Blue drag", "color" : 'Blue'});}
             
-        )
+        })
       } );
-
-      $( function() {
-        $( ".draggreen").draggable(
-            {aptrinsic('track', 'DragE', {"name":"Drag Green","Colour":"Green","Event":Drag});}
+$( function() {
+        $( ".draggreen").draggable({
+            stop : function r() {aptrinsic('track','dragevent',{"name":"Green drag", "color" : 'Green'});}
             
-            
-        )
+        })
       } );
 
     </script>
